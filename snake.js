@@ -108,7 +108,7 @@ function draw(){
 	}
 
 
-	if(snakeX<box || snakeX>17*box || snakeY<3*box || snakeY>17*box || collision(newHead, snake)){
+	if(snakeX<box || snakeX>17*box || snakeY<3*box || snakeY>17*box){
 		dead.play()
 		clearInterval(game);
 	}
