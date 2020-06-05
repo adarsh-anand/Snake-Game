@@ -92,8 +92,8 @@ function draw(){
 		score++;
         	eat.play();
         	food = {
-            	x : Math.floor(Math.random()*17+1) * box,
-            	y : Math.floor(Math.random()*15+3) * box
+			x : Math.floor(Math.random()*17+1) * box,
+			y : Math.floor(Math.random()*15+3) * box
         	}
         }
 	else{
@@ -102,15 +102,15 @@ function draw(){
     
     
 	let newHead = {
-        x : snakeX,
-        y : snakeY
+		x : snakeX,
+        	y : snakeY
     }
 
 
     
 	if(snakeX < box || snakeX > 17 * box || snakeY < 3*box || snakeY > 17*box || collision(newHead,snake)){
-        clearInterval(game);
-        dead.play();
+		clearInterval(game);
+        	dead.play();
 	}
     
     	snake.unshift(newHead);
@@ -120,4 +120,4 @@ function draw(){
     	ctx.fillText(score,2*box,1.6*box);
 }
 
-let game = setInterval(draw, 100);
+let game = setInterval(draw, 150);
